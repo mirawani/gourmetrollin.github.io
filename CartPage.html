@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gourmet Rollin' Grocery - Cart Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gourmet Rollin' Grocery</h1>
+    <nav>
+      <div class="container">
+        <button class="main-button" onclick="window.open('index.html', '_blank')">Home</button>
+        <button class="main-button" onclick="window.open('RegistrationPage.html', '_blank')">Registration</button>
+        <button class="main-button" onclick="window.open('ProductPage.html', '_blank')">Products</button>
+        <button class="main-button" onclick="location.href='CartPage.html'">Cart</button>
+        <button class="main-button" onclick="window.open('AboutPage.html', '_blank')">About</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Shopping Cart</h2>
+    <p>Click the image to add product in your cart.</p>
+    <div id="cart" class="cart-container">
+      <div class="cart-item">
+        <button onclick="addToCart('Salt')" class="add-to-cart-button">
+          <img src="salt.jpg" alt="Salt" class="item-image">
+          <div class="item-name">Salt</div>
+        </button>
+      </div>
+      <div class="cart-item">
+        <button onclick="addToCart('Pepper')" class="add-to-cart-button">
+          <img src="pepper.jpg" alt="Pepper" class="item-image">
+          <div class="item-name">Pepper</div>
+        </button>
+      </div>
+      <div class="cart-item">
+        <button onclick="addToCart('Cinnamon')" class="add-to-cart-button">
+          <img src="cinnamon.jpg" alt="Cinnamon" class="item-image">
+          <div class="item-name">Cinnamon</div>
+        </button>
+      </div>
+      <div class="cart-item">
+        <button onclick="addToCart('Ginger')" class="add-to-cart-button">
+          <img src="ginger.jpg" alt="Ginger" class="item-image">
+          <div class="item-name">Ginger</div>
+        </button>
+      </div>
+      <div class="cart-item">
+        <button onclick="addToCart('Cloves')" class="add-to-cart-button">
+          <img src="clove.jpg" alt="Cloves" class="item-image">
+          <div class="item-name">Cloves</div>
+        </button>
+      </div>
+      <div class="cart-item">
+        <button onclick="addToCart('Black Pepper')" class="add-to-cart-button">
+          <img src="black pepper.jpg" alt="Black Pepper" class="item-image">
+          <div class="item-name">Black Pepper</div>
+        </button>
+      </div>
+    </div>
+    <button type="submit" class="checkout-button" onclick="checkout()">Checkout</button>
+    
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2023 Gourmet Rollin' Grocery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var cart = [];
+
+    function addToCart(item) {
+      cart.push(item);
+      alert(item + " added to cart!");
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Please add items to proceed to checkout.");
+      } else {
+        alert("Thank you for your purchase! Items: " + cart.join(", "));
+        cart = [];
+      }
+    }
+  </script>
+</body>
+</html>
