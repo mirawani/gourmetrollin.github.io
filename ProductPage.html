@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gourmet Rollin' Grocery - Product Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: 2px solid black;
+    }
+
+    .product-table th, .product-table td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    .product-table img {
+      width: 100px;
+      height: auto; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gourmet Rollin' Grocery</h1>
+    <nav>
+      <div class="container">
+        <button class="main-button" onclick="window.open('index.html', '_blank')">Home</button>
+        <button class="main-button" onclick="window.open('RegistrationPage.html', '_blank')">Registration</button>
+        <button class="main-button" onclick="location.href='ProductPage.html'">Products</button>
+        <button class="main-button" onclick="window.open('CartPage.html', '_blank')">Cart</button>
+        <button class="main-button" onclick="window.open('AboutPage.html', '_blank')">About</button>
+      </div>
+    </nav>
+
+    <audio controls autoplay>
+      <source src="Cinnamoroll - Star Dome.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+  </header>
+
+  <main>
+    <h2 class="section-title">Products</h2>
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Salt</td>
+          <td><img src="salt.jpg" alt="Salt"></td>
+        </tr>
+        <tr>
+          <td>Pepper</td>
+          <td><img src="pepper.jpg" alt="Pepper"></td>
+        </tr>
+        <tr>
+          <td>Cinnamon</td>
+          <td><img src="cinnamon.jpg" alt="Cinnamon"></td>
+        </tr>
+        <tr>
+          <td>Ginger</td>
+          <td><img src="ginger.jpg" alt="Ginger"></td>
+        </tr>
+        <tr>
+          <td>Cloves</td>
+          <td><img src="clove.jpg" alt="Cloves"></td>
+        </tr>
+        <tr>
+          <td>Black Pepper</td>
+          <td><img src="black pepper.jpg" alt="Black Pepper"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2023 Gourmet Rollin' Grocery. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
