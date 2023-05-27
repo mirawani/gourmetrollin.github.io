@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gourmet Rollin' Grocery - Home Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gourmet Rollin' Grocery</h1> 
+    <div class="container">
+      <button class="main-button" onclick="location.href='index.html'">Home</button>
+      <button class="main-button" onclick="window.open('RegistrationPage.html', '_blank')">Registration</button>
+      <button class="main-button" onclick="window.open('ProductPage.html', '_blank')">Products</button>
+      <button class="main-button" onclick="window.open('CartPage.html', '_blank')">Cart</button>
+      <button class="main-button" onclick="window.open('AboutPage.html', '_blank')">About</button>
+    </div>
+    <div class="search-container">
+      <form class="search-form" action="/search" method="get">
+        <input type="text" name="query" placeholder="Search..." />
+        <button type="submit">Search</button>
+      </form>
+    </div>   
+  </header>
+
+  <main style="padding: 40px; text-align: center; margin: 20px; font-size: 20px;">
+    <div id="content">
+      <h2>Welcome to Gourmet Rollin' Grocery!</h2>
+      <p>Indulge in a world of gourmet delights.
+        Roll with us and savor the extraordinary.
+        Enjoy your gastronomic journey!</p>
+
+        <video src="video_cinnamoroll.mp4" width="640" height="360" controls>
+          Your browser does not support the video tag.
+        </video>
+        
+        
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2023 Gourmet Rollin' Grocery. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
