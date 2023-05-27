@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gourmet Rollin' Grocery - Registration Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gourmet Rollin' Grocery</h1>
+    <nav>
+      <div class="container">
+        <button class="main-button" onclick="window.open('index.html', '_blank')">Home</button>
+        <button class="main-button" onclick="location.href='RegistrationPage.html'">Registration</button>
+        <button class="main-button" onclick="window.open('ProductPage.html', '_blank')">Products</button>
+        <button class="main-button" onclick="window.open('CartPage.html', '_blank')">Cart</button>
+        <button class="main-button" onclick="window.open('AboutPage.html', '_blank')">About</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Registration Form</h2>
+    <p class="section-description">Please fill in your information below.</p>
+  
+    <form class="registration-form" id="registration-form">
+      <fieldset class="account-information">
+        <legend>Account Information</legend>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+      </fieldset>
+      <button type="submit" class="register-button">Register</button>
+      
+      <div class="col-12 text-center">
+        <p class="text-muted">Already have an account? <a href="Login.html" class="text-dark m-l-5"><b>Log In</b></a></p>
+      </div>
+    </form>
+  </main>
+    
+  <footer>
+    <div class="footer-container">
+      <p>&copy; Gourmet Rollin' Grocery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      alert('You have been registered!');
+
+      event.target.reset();
+    }
+
+    const form = document.getElementById('registration-form');
+    form.addEventListener('submit', handleSubmit);
+  </script>
+</body>
+</html>
